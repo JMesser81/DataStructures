@@ -43,6 +43,8 @@ IntSLList::~IntSLList()
 void IntSLList::print()
 {
 	IntSLLNode* current = head;
+	if (current == 0) return;
+
 	while (current != tail)
 	{
 		std::cout << current->data << std::endl;
@@ -87,10 +89,19 @@ void IntSLList::addNodeToHead(int value)
 	{
 		head->next = p;
 	}
+	else
+	{
+		tail = head;
+	}
 }
 
 int IntSLList::pop()
 {
+	if (tail == 0)
+	{
+		return -1;
+	}
+
 	int value = tail->data;
 
 	if (head == tail)
@@ -120,8 +131,44 @@ int IntSLList::popFromHead()
 	}
 
 	int value = head->data;
-	delete head;
-	head = head->next;
+	IntSLLNode *p = head;
+	head = p->next;
+	delete p;
 
 	return value;
+}
+
+void IntSLList::deleteNode(int value)
+{	
+	if (head == 0)
+	{
+		return;
+	}
+	
+	IntSLLNode *p = 0;	
+	IntSLLNode *lastNode = head;
+	for (p = head; p != 0; p = p->next)
+	{
+		if (p->data == value)
+		{
+			if (p == head)
+			{
+				head = lastNode->next;
+				delete lastNode;
+			}
+			else if (p == tail)
+			{
+				tail = lastNode->next;
+				delete lastNode;
+			}
+			else
+			{
+				IntSLLNode *tmp = p;
+				lastNode->next = p->next;
+				delete tmp;
+			}
+			return;
+		}
+		lastNode = p;
+	}
 }

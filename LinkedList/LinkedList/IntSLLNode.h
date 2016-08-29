@@ -10,9 +10,7 @@ public:
 	IntSLLNode(int value, IntSLLNode *ptr = 0) :
 		data(value),
 		next(ptr)
-	{}
-
-	~IntSLLNode();
+	{}	
 
 	int data; 
 	IntSLLNode *next;

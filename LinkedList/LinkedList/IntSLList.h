@@ -20,10 +20,8 @@ public:
 	int pop();
 	int popFromHead();
 
-	//void deleteFromTail();
-	//void deleteFromHead();
-
-	//bool isInList(int) const;
+	void deleteNode(int value);	
+	bool isInList(int) const;
 
 private:
 	IntSLLNode *head;

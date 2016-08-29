@@ -9,13 +9,17 @@ int main()
 {
 	IntSLList list;
 
+	std::cout << "Popped :" << list.pop() << std::endl;
+
 	for (int i = 0; i < 5; i++)
 	{
-		list.addNode(i);
+		list.addNodeToHead(i);
 	}
 	list.print();
 
-	for (int i = 0; i < 5; i++)
+	list.deleteNode(0);
+
+	while (!list.isEmpty())
 	{
 		std::cout << list.pop() << std::endl;
 	}
