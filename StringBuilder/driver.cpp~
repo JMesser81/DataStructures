@@ -1,0 +1,12 @@
+#include <StringBuilder.h>
+
+int main()
+{
+  StringBuilder sb;
+  string str_one = "Jason";
+  string str_two = "Misty";
+  string str_input;
+
+  sb.append()
+
+  

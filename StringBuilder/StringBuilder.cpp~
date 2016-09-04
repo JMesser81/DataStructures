@@ -1,0 +1,8 @@
+#include "StringBuilder.h"
+
+StringBuilder::StringBuilder()
+{
+
+}
+
+void StringBuilder::append()

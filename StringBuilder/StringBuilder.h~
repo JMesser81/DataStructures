@@ -1,0 +1,15 @@
+#ifndef _STRING_BUILDER_H
+
+#include <string>
+
+class StringBuilder
+{
+ public:
+  append(std::string in);
+
+ private:
+  string thestring;
+
+}
+
+#endif _STRING_BUILDER_H
