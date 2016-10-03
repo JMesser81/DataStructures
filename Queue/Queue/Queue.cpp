@@ -7,6 +7,11 @@
 
 int main()
 {
+	GenericQueue myQueue;
+
+	myQueue.clear();
+
+	myQueue.put();
     return 0;
 }
 
