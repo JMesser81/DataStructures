@@ -7,11 +7,27 @@
 
 int main()
 {
-	GenericQueue myQueue;
+	GenericQueue<int> myQueue;
 
-	myQueue.clear();
+	myQueue.enqueue(1);
+	myQueue.enqueue(2);
+	myQueue.enqueue(3);
+	myQueue.print();
 
-	myQueue.put();
-    return 0;
+	myQueue.dequeue();
+	myQueue.print();
+	
+	myQueue.enqueue(4);
+	myQueue.print();
+
+	myQueue.dequeue();
+	myQueue.dequeue();
+	myQueue.print();
+
+	myQueue.dequeue();
+	myQueue.print();
+	myQueue.dequeue();
+
+	return 0;
 }
 
